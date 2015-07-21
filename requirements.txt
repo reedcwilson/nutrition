@@ -1,2 +1,2 @@
-myfitnesspal=1.6
-Flask=0.10.1
+myfitnesspal==1.6
+Flask==0.10.1
