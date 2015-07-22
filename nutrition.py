@@ -57,7 +57,7 @@ def main():
   args = parser.parse_args()
   port = os.environ.get('PORT') 
   port = port if port else 5000
-  app.run(debug=args.debug, port=port)
+  app.run(debug=args.debug, port=int(port))
 
 if __name__ == "__main__":
   main()
