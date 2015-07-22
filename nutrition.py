@@ -3,6 +3,7 @@ import time
 import flask
 import sys
 import argparse
+import os
 
 class Nutrition:
 
@@ -54,7 +55,9 @@ def main():
   parser = argparse.ArgumentParser(prog='nutrition', description='An API for MyFitnessPal', add_help=True)
   parser.add_argument('-d', '--debug', action='store_true')
   args = parser.parse_args()
-  app.run(debug=args.debug)
+  port = os.environ.get('PORT') 
+  port = port if port else 5000
+  app.run(debug=args.debug, port=port)
 
 if __name__ == "__main__":
   main()
