@@ -55,7 +55,7 @@ def main():
   parser = argparse.ArgumentParser(prog='nutrition', description='An API for MyFitnessPal', add_help=True)
   parser.add_argument('-d', '--debug', action='store_true')
   args = parser.parse_args()
-  int(os.environ.get('PORT', 5000))
+  port = int(os.environ.get('PORT', 5000))
   app.run(debug=args.debug, port=port, host='0.0.0.0')
 
 if __name__ == "__main__":
